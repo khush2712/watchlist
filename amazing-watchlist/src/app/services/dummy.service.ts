@@ -15,7 +15,7 @@ export class DummyService {
         name: 'Doctor Who',
         language: 'English',
         genres: ['Sci-Fi', 'Action', 'Adventure'],
-        id: 210,
+        id: 110,
         summary: 'A show about a time travelling alien called The Doctor.',
         status: 'ongoing',
         image: 'https://static.tvmaze.com/uploads/images/medium_portrait/231/579166.jpg'
@@ -33,7 +33,7 @@ export class DummyService {
         name: 'Smallville',
         language: 'English',
         genres: ['Sci-Fi', 'Action', 'Adventure'],
-        id: 210,
+        id: 220,
         summary: 'A show about Superman as a teenager.',
         status: 'ongoing',
         image: 'https://static.tvmaze.com/uploads/images/medium_portrait/231/579166.jpg'
@@ -88,5 +88,8 @@ export class DummyService {
 
   getEpisodes(): Observable<Array<Episode>> {
     return of<Array<Episode>>(this.episodes);
+  }
+  getShow(id: string): Observable<Show> {
+    return of<Show>(this.shows[0]);
   }
 }
