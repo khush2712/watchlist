@@ -89,6 +89,7 @@ export class DummyService {
   getEpisodes(): Observable<Array<Episode>> {
     return of<Array<Episode>>(this.episodes);
   }
+
   getShow(id: string): Observable<Show> {
     return of<Show>(this.shows[0]);
   }

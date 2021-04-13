@@ -1,3 +1,11 @@
+ mat-column-number {
+  width: 45px;
+}
+
+.mat-column-aired {
+  width: 50%;
+}
+
 table {
   width: 100%;
 }
