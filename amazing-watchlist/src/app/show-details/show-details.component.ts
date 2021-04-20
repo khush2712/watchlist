@@ -22,13 +22,14 @@ export class ShowDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((p) => {
       this.dummyService.getShow(p.id).subscribe((show) => { this.show = show; });
-      // tslint:disable-next-line:no-unused-expression
-      this.dummyService.getEpisodes().subscribe((eps)  => { this.episodes = new MatTableDataSource<Episode>(); eps; });
+      this.dummyService.getEpisodes().subscribe((eps)  => {
+        this.episodes = new MatTableDataSource<Episode>(eps);
+        });
     });
   }
 
   applyFilter(e: Event): void {
-    const filterValue = (event.target as HTMLInputElement).value;
+    const filterValue = (e.target as HTMLInputElement).value;
     this.episodes.filter = filterValue.trim().toLowerCase();
   }
   }

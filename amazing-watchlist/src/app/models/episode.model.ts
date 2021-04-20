@@ -5,6 +5,7 @@ export class Episode {
   episodeNumber: number;
   airDate: Date;
   summary: string;
+  fullNumber: string;
 
   constructor(episodeInfo) {
     this.id = episodeInfo.id;
@@ -13,5 +14,6 @@ export class Episode {
     this.episodeNumber = episodeInfo.episode;
     this.airDate = new Date(episodeInfo.airdate);
     this.summary = episodeInfo.summary;
+    this.fullNumber = `S${(episodeInfo.season > 10) ? episodeInfo.season : '0' + episodeInfo.season }E${(episodeInfo.episode > 10) ? episodeInfo.episode : '0' + episodeInfo.episode }`;
   }
 }
