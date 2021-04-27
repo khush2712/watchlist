@@ -14,6 +14,6 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {}
 
   search(): void {
-    this.router.navigate(  ['search',this.query]);
+    this.router.navigate(  ['search', this.query]);
   }
 }
