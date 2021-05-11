@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +24,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { EncryptPipe } from './controls/encrypt.pipe';
 import { ShortenPipe } from './controls/shorten.pipe';
+import { HtmlstripperPipe } from './controls/htmlstripper.pipe';
 
 @NgModule({
   declarations: [
@@ -35,11 +37,13 @@ import { ShortenPipe } from './controls/shorten.pipe';
     WatchlistComponent,
     ErrorComponent,
     EncryptPipe,
-    ShortenPipe
+    ShortenPipe,
+    HtmlstripperPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
     MatToolbarModule,
